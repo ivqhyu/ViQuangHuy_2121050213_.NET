@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* This style sets the width of all images to 100%: */
+img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h2>Vì Quang Huy</h2>
+
+<p>The first image uses the width attribute (set to 128 pixels), but the style in the head section overrides it, and sets the width to 100%.</p>
+
+<img src="https://www.w3schools.com/images/html5.gif"alt="W3Schools.com"style="width:104px;height:142px;">
+
+
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+<p>The second image uses the style attribute to set the width to 128 pixels, this will not be overridden by the style in the head section:</p>
+
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+
+
+<h2>2121050213</h2>
+
+<p>HTML allows moving images:</p>
+
+<img src="https://www.w3schools.com/html/programming.gif" alt="Computer man" style="width:48px;height:48px;">
+
+
+<h2>Image as a Link</h2>
+
+<p>The image is a link. You can click on it.</p>
+
+<a href="default.asp">
+<img src="https://www.w3schools.com/html/smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+
+<h2>Background Image</h2>
+
+<p>A background image for a p element:</p>
+
+<p style="background-image: url('img_girl.jpg');">
+You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a p element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.)
+</p>
+
+
+<style>
+body {
+   background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+</style>
+</head>
+<body>
+
+<h2>Vì Quang Huy</h2>
+
+<p>You can avoid the image from being repeated by setting the background-repeat property to "no-repeat".</p>
+
+</body>
+</html>
