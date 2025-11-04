@@ -1,0 +1,13 @@
+@model DemoMvc_213.Models.Student
+
+<h2>Thông tin sinh viên vừa nhập</h2>
+<ul>
+    <li><strong>Mã sinh viên:</strong> @Model.Id</li>
+    <li><strong>Họ tên:</strong> @Model.Name</li>
+    <li><strong>Tuổi:</strong> @Model.Age</li>
+    <li><strong>Ngành học:</strong> @Model.Major</li>
+</ul>
+
+<p>@ViewBag.Info</p>
+
+<a href="/Demo/CreateStudent">← Nhập lại</a>

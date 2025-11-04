@@ -1,0 +1,22 @@
+@{
+    <h1>Trang Demo ViewBag - ViewData - TempData</h1>
+    
+    var viewDataList = ViewData["Student"] as List<string>;
+    var viewBagList = ViewBag.Student as List<string>;
+    var tempDataList = TempData["Student"]?.ToString().Split(',');
+}
+
+<h2> ViewData</h2>
+<ul>
+    @foreach (var s in viewDataList) { <li>@s</li> }
+</ul>
+
+<h2> ViewBag</h2>
+<ul>
+    @foreach (var s in viewBagList) { <li>@s</li> }
+</ul>
+
+<h2>TempData</h2>
+<ul>
+    @foreach (var s in tempDataList) { <li>@s</li> }
+</ul>

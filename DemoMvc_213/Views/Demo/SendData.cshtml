@@ -1,0 +1,18 @@
+<h2>Demo gửi & nhận dữ liệu giữa Controller và View</h2>
+
+<!-- Hiển thị dữ liệu Controller gửi sang -->
+<p><strong>Từ ViewBag:</strong> @ViewBag.Message</p>
+
+<hr />
+<!-- Gửi dữ liệu từ View lên Controller -->
+<form method="post" asp-action="ReceiveData" asp-controller="Demo">
+    <label>Hãy nhập tên của bạn:</label><br />
+    <input type="text" name="username" required />
+    <button type="submit">Gửi</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <hr />
+    <p style="color:green">@ViewBag.Result</p>
+}
