@@ -1,0 +1,63 @@
+@* @{
+    ViewData["Title"] = "Person Form";
+}
+
+<h2>Nhập thông tin Person</h2>
+
+<form method="post" asp-action="Person" asp-controller="Person">
+    <label>Nhập Họ tên</label>
+    <input type="text" name="FullName" />
+
+    <label>Nhập PersonId</label>
+    <input type="number" name="PersonId" />
+
+    <label>Nhập Địa chỉ</label>
+    <input type="text" name="Address" />
+
+    <input type="submit" value="Gửi dữ liệu" />
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+} *@
+
+
+@model IEnumerable<DemoMvc_213.Models.Person>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

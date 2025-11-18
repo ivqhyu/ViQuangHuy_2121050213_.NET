@@ -66,7 +66,7 @@ namespace DemoMvc_213.Controllers
 
 
 
-        // Hiển thị lời chào người dùng (nhập tên, tuổi)
+// Hiển thị lời chào người dùng (nhập tên, tuổi)
         // Hiển thị form nhập tên
         public IActionResult Hello()
         {
