@@ -49,11 +49,11 @@ namespace DemoMvc_213.Controllers
         // 
         public IActionResult CreateStudent()
         {
-            return View(new Student());
+            return View(new Students());
         }
 
         [HttpPost]
-        public IActionResult CreateStudent(Student student)
+        public IActionResult CreateStudent(Students student)
         {
             // Nhận dữ liệu từ form 
             if (ModelState.IsValid)
